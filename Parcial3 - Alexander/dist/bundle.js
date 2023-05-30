@@ -156,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"reducer\": () => (/* binding */ reducer)\n/* harmony export */ });\n/* harmony import */ var _types_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../types/store */ \"./src/types/store.ts\");\n\nconst reducer = (actions, state) => {\n    {\n        action, payload;\n    }\n    actions;\n    switch (action) {\n        case _types_store__WEBPACK_IMPORTED_MODULE_0__.SomeActions.NEW_RECIPE:\n            state.recipes = [...state.recipes];\n            return state;\n        default:\n            return state;\n    }\n};\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/store/reducer.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"reducer\": () => (/* binding */ reducer)\n/* harmony export */ });\n/* harmony import */ var _types_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../types/store */ \"./src/types/store.ts\");\n\nconst reducer = (actions, state) => {\n    const { action, payload } = actions;\n    switch (action) {\n        case _types_store__WEBPACK_IMPORTED_MODULE_0__.SomeActions.NEW_RECIPE:\n            state.recipes = [...state.recipes, payload];\n            return state;\n        default:\n            return state;\n    }\n};\n\n\n//# sourceURL=webpack://dca_scoffolding/./src/store/reducer.ts?");
 
 /***/ }),
 
